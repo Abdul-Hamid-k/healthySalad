@@ -7,7 +7,7 @@
 }
 
 :root {
-  --brand-color: orange;
+  --brand-color: #ffa500;
   --red: rgb(246, 82, 67);
   --d-gray: rgb(55, 55, 55);
   --l-gray: rgb(99, 99, 99);
@@ -132,7 +132,9 @@ nav > div {
   margin-top: 4rem;
   flex-direction: column;
   justify-content: center;
+  position: relative;
   gap: 1rem;
+  z-index: 2;
   max-width: 500px;
 }
 
@@ -200,10 +202,9 @@ nav > div {
   min-height: 40vh;
   max-height: 70vh;
   max-width: 70vw;
-  position: relative;
   object-fit: cover;
   border-radius: 2rem;
-  
+  z-index: 1;
   margin-top: 5rem;
 }
 
@@ -219,6 +220,15 @@ nav > div {
     max-width: 350px;
     min-width: 250px;
     width: 50%;
+    z-index: 1;
+}
+
+.arrow{
+    position: absolute;
+    bottom: 80px;
+    right: 20px;
+    width: 200px;
+    z-index: -1;
 }
 
 /* ------------------------------ */
