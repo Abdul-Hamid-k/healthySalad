@@ -11,11 +11,11 @@
   --red: rgb(246, 82, 67);
   --d-gray: rgb(55, 55, 55);
   --l-gray: rgb(99, 99, 99);
-  --bg-c1: rgba(255, 255, 255, 0.989);
+  --bg-c1: white;
 }
 
 #body {
-  background-color: white;
+  background-color: var(--bg-c1);
 }
 
 .color-brand {
@@ -49,7 +49,7 @@ nav > div {
   font-size: 1rem;
 }
 .navbar-collapse {
-  flex-grow: 0;
+  flex-grow: 1;
 }
 
 .nav-item {
@@ -66,6 +66,10 @@ nav > div {
   justify-content: space-between !important;
   padding: 0 10%;
   width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 1rem;
+
   background-color: var(--bg-c1) !important;
 }
 
@@ -86,7 +90,8 @@ nav > div {
   color: white;
 }
 
-.loginBtn:hover {
+.loginBtn:hover,
+.loginBtn:checked {
   color: white;
   transition: 0.2s;
   box-shadow: 0 2px 5px gray;
@@ -208,27 +213,27 @@ nav > div {
   margin-top: 5rem;
 }
 
-.hero-imgs{
-    justify-self: center;
-    align-self: center;
+.hero-imgs {
+  justify-self: center;
+  align-self: center;
 }
 
-.hero-side-card{
-    position: relative;
-    bottom: 40px;
-    left: -20px;
-    max-width: 350px;
-    min-width: 250px;
-    width: 50%;
-    z-index: 1;
+.hero-side-card {
+  position: relative;
+  bottom: 40px;
+  left: -20px;
+  max-width: 350px;
+  min-width: 250px;
+  width: 50%;
+  z-index: 1;
 }
 
-.arrow{
-    position: absolute;
-    bottom: 80px;
-    right: 20px;
-    width: 200px;
-    z-index: -1;
+.arrow {
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
+  width: 200px;
+  z-index: -1;
 }
 
 /* ------------------------------ */
@@ -236,11 +241,22 @@ nav > div {
   .home-content h1 {
     font-size: 2rem;
   }
+
+  #nav #navbarSupportedContent{
+    background-color: rgba(229, 229, 229, 0.71) !important;
+    margin: 0;
+    padding: 0;
+  }
+  
 }
 
 @media (max-width: 797px) {
   #Home {
     flex-direction: column;
+  }
+
+  #nav {
+    font-weight: 500;
   }
 
   .home-content {
@@ -260,21 +276,19 @@ nav > div {
 }
 
 @media (max-width: 576px) {
-  .btn{
+  .btn {
     font-size: 0.9rem;
   }
 }
 
 @media (max-width: 300px) {
-    .logo {
-        height: 2.5rem;
-      }
-    
-      #nav > div > a > p {
-        color: var(--d-gray);
-        font-weight: 700;
-        font-size: 1rem;
-      }
+  .logo {
+    height: 2.5rem;
   }
 
-
+  #nav > div > a > p {
+    color: var(--d-gray);
+    font-weight: 700;
+    font-size: 1rem;
+  }
+}
