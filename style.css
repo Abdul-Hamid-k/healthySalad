@@ -283,6 +283,7 @@ nav > div {
   position: relative;
   /* width: 400px; */
   height: 100%;
+  width: 100%;
   min-height: 350px;
 }
 
