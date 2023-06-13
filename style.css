@@ -49,7 +49,7 @@ nav > div {
   font-size: 1rem;
 }
 .navbar-collapse {
-  flex-grow: 1;
+  flex-grow: 0;
 }
 
 .nav-item {
@@ -68,8 +68,7 @@ nav > div {
   width: 100%;
   list-style-type: none;
   margin: 0;
-  padding: 1rem;
-
+  padding: 1rem 10%;
   background-color: var(--bg-c1) !important;
 }
 
@@ -118,8 +117,8 @@ nav > div {
 }
 
 #Home {
-  height: 90vh;
-  max-height: 700px;
+  /* height: 90vh; */
+  /* max-height: 700px; */
   /* width: 100%; */
   display: flex;
   gap: 2rem;
@@ -236,18 +235,59 @@ nav > div {
   z-index: -1;
 }
 
+/* ---------------------- */
+/* Features */
+
+#features{
+  margin-top: 3rem;
+}
+.feature-item > img {
+  max-height: 70px;
+}
+
+.feature-item {
+  min-width: 250px;
+  max-height: 500px;
+}
+
+.feature-item h5 {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  font-weight: 700;
+  color: var(--d-gray);
+}
+
+.feature-item p {
+  font-size: 0.75rem;
+  color: var(--l-gray);
+}
+
+.feature-item small{
+  font-size: 0.9rem;
+  justify-self: center;
+  align-self: center;
+  color: var(--l-gray);
+}
+
 /* ------------------------------ */
 @media (max-width: 992px) {
   .home-content h1 {
     font-size: 2rem;
   }
 
-  #nav #navbarSupportedContent{
+  #nav #navbarSupportedContent {
     background-color: rgba(180, 180, 180, 0.71) !important;
     margin: 0;
     padding: 0;
+    z-index: 5;
   }
-  
+
+  #features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 797px) {
@@ -268,10 +308,21 @@ nav > div {
     font-size: 2rem;
   }
 
+  #Home {
+    height: 100%;
+  }
+
   .hero-img {
     width: 100%;
     max-height: 90vh;
     max-width: 90vw;
+  }
+
+  /* Features */
+  #features {
+    
+    grid-template-columns: 1fr
+    
   }
 }
 
