@@ -374,7 +374,7 @@ nav > div {
   background-color: white;
   padding: 1rem;
   border-radius: var(--border-radius-sm);
-  transition: 0.2s;
+  /* transition: 0.2s; */
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -383,7 +383,7 @@ nav > div {
 .Home-about-2-item:hover {
   color: white;
   background-color: var(--red);
-  transition: 0.2s;
+  /* transition: 0.2s; */
 }
 
 .HA2I-1 {
@@ -421,7 +421,7 @@ nav > div {
 .Home-about-2-item:hover a,
 .Home-about-2-item:hover h4 {
   color: white;
-  transition: 0.2s;
+  /* transition: 0.2s; */
 }
 
 .Home-about-2-item:hover a:hover {
@@ -623,7 +623,22 @@ nav > div {
   }
 
   .Home-about-2-s-2 {
-    grid-template-columns: repeat(1, 1fr);
+    gap: 0.8rem;
+  }
+
+  .Home-about-2-item{
+    gap: 0.2rem;
+  }
+
+  .Home-about-2-s-2 p, .Home-about-2-s-2 a {
+    /* grid-template-columns: repeat(1, 1fr); */
+    font-size: 0.6rem;
+    
+  }
+
+  .Home-about-2-s-2 h4{
+    font-size: 0.8rem;
+  
   }
 }
 
