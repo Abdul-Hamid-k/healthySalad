@@ -8,13 +8,14 @@
 
 :root {
   --brand-color: #ffa500;
-  --red: #f65243;
+  --red: #f65243ce;
   --l-red: #ffeded;
   --d-gray: rgb(55, 55, 55);
   --l-gray: rgb(99, 99, 99);
   --bg-c1: white;
   --border-radius-bg: 2rem;
   --border-radius-sm: 0.5rem;
+  --l-white: rgba(242, 242, 242, 0.841);
 }
 
 #body {
@@ -115,7 +116,8 @@ nav > div {
 #Home,
 #features,
 #Home-about-1,
-#Home-about-2 {
+#Home-about-2,
+footer {
   padding: 0 10%;
 }
 /* ------------------------------------ */
@@ -277,7 +279,7 @@ nav > div {
   color: var(--l-gray);
 }
 
-/* ------------------------------ */
+/* ----------------------------------------------------------------------------------- */
 /* Home About */
 #Home-about-1 {
   display: grid;
@@ -329,7 +331,7 @@ nav > div {
 }
 
 /* Home About - 2 */
-/* ------------------- */
+/* ------------------- ----------------------------------------------------- */
 #Home-about-2 {
   margin-top: 5rem;
   margin: 4rem 0 !important;
@@ -465,6 +467,118 @@ nav > div {
   margin-bottom: 0.7rem;
 }
 
+/* News Letter ----------------------------------------------------- */
+#news-letter {
+  background-color: var(--red);
+  margin: 10rem 10% 2rem 10%;
+  padding: 2.5rem;
+  border-radius: var(--border-radius-bg);
+  color: var(--l-white);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  position: relative;
+}
+
+.news-letter-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+#news-letter h3 {
+  font-weight: 700;
+  color: white;
+  font-size: 2rem;
+}
+
+#new-letter p {
+  font-size: 0.8rem;
+}
+
+.news-letter-input {
+  background-color: white;
+  width: max-content;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-sm);
+}
+
+.news-letter-input img {
+  height: 25px;
+}
+
+.news-letter-input input[type="email"] {
+  border: 0;
+  padding: 0.5rem 1rem;
+  outline: none;
+  max-width: 200px;
+  min-width: 100px;
+  color: var(--red);
+}
+
+#news-letter > img {
+  position: absolute;
+  left: 45%;
+  bottom: 0px;
+  height: 450px;
+}
+
+/* Footer ----------------------------------------------------- */
+footer{
+  /* background-color: var(--l-red); */
+  padding: 2rem 10%;
+  margin-top: 5rem;
+}
+
+.footer-content{
+  /* display: flex; */
+  display: grid;
+  gap: 1rem;
+  /* justify-content: space-between; */
+  /* flex-wrap: wrap; */
+  grid-template-columns: 2fr 1fr  1fr 1fr 1.5fr;
+}
+
+.footer-content p{
+  margin-bottom: 0;
+}
+
+.footer-content img{
+  height: 1.5rem;
+  width: 1.5rem;
+  
+}
+
+.footer-content div{
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  font-size: 0.8rem;
+  color: var(--l-gray);
+  gap: 0.5rem;
+}
+
+.footer-content h5{
+  font-weight: 700;
+  margin-bottom: 0;
+  color: var(--d-gray);
+  justify-self: center;
+}
+
+.icons{
+  display: flex;
+  flex-direction: row !important;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.copyright{
+  text-align: center;
+}
+
 /* ------------------------------ */
 @media (max-width: 992px) {
   .home-content h1 {
@@ -513,6 +627,36 @@ nav > div {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 1fr;
   }
+
+  /* News Letter */
+
+  #news-letter {
+    gap: 0.5rem;
+  }
+
+  #news-letter > img {
+    left: 39%;
+    bottom: 0px;
+    height: 400px;
+  }
+
+  .news-letter-content p {
+    width: 270px;
+    z-index: 1;
+  }
+
+  .news-letter-input {
+    z-index: 1;
+  }
+
+  .footer-content p{
+   /* display: none; */
+   font-size: 0.6rem;
+  }
+
+  .footer-content h5{
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 797px) {
@@ -543,12 +687,12 @@ nav > div {
     max-width: 90vw;
   }
 
-  /* Features */
+  /* Features ---------------------------------------------------------------------------------- */
   #features {
     grid-template-columns: 1fr;
   }
 
-  /* Home About - 1 */
+  /* Home About - 1 ----------------------------------------------------------------------------- */
   #Home-about-1 {
     display: flex;
     flex-direction: column;
@@ -578,7 +722,27 @@ nav > div {
     top: 220px;
   }
 
-  /* Home About - 2 */
+  /* New-letter  ------------------------------------------------------------------------  */
+  #news-letter {
+    grid-template-columns: 1fr;
+    /* padding-bottom: 10rem; */
+    gap: 1.2rem;
+  }
+
+  #news-letter > img {
+    left: 20%;
+    bottom: 0px;
+    height: 400px;
+  }
+
+  .news-letter-content p {
+    width: 55%;
+    z-index: 1;
+  }
+
+  .news-letter-content h3 {
+    width: 60%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -626,19 +790,74 @@ nav > div {
     gap: 0.8rem;
   }
 
-  .Home-about-2-item{
+  .Home-about-2-item {
     gap: 0.2rem;
   }
 
-  .Home-about-2-s-2 p, .Home-about-2-s-2 a {
+  .Home-about-2-s-2 p,
+  .Home-about-2-s-2 a {
     /* grid-template-columns: repeat(1, 1fr); */
     font-size: 0.6rem;
-    
   }
 
-  .Home-about-2-s-2 h4{
+  .Home-about-2-s-2 h4 {
     font-size: 0.8rem;
-  
+  }
+
+  /* New-letter  ------------------------------------------------------------------------  */
+  #news-letter {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  #news-letter > img {
+    left: -10%;
+    bottom: 75px;
+    z-index: 0;
+    height: 250px;
+  }
+
+  .news-letter-content p {
+    width: fit-content;
+    font-size: 0.8rem;
+  }
+
+  .news-letter-content h3 {
+    font-size: 1.2rem !important;
+    width: fit-content;
+  }
+
+  .news-letter-input {
+    margin-top: 13rem;
+    width: 60vw;
+    padding: 0.2rem;
+    font-size: 0.8rem ;
+  }
+
+  .news-letter-input form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .news-letter-input input {
+    min-width: 20%;
+  }
+
+  .news-letter-input img {
+    display: none;
+  }
+
+  .footer-content p , .footer-content img{
+    display: none;
+  }
+
+  .footer-content .logo, .icons img{
+    display: inline-block;
+  }
+
+  .footer-content{
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -661,5 +880,22 @@ nav > div {
     width: 180px;
     top: 110px;
     left: 50px;
+  }
+
+  #news-letter > img {
+    display: none;
+  }
+
+  .news-letter-input{
+    margin-top: 0;
+  }
+
+  .news-letter-input form {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .news-letter-input input {
+    min-width: 20%;
   }
 }
